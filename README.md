@@ -1,12 +1,12 @@
 # Twitter Screenshot Button
-Version 1.0
+Version 1.1
 
-A Tampermonkey userscript that adds a screenshot button to Twitter/X post menus, allowing you to easily capture and save tweets as images.
+A Tampermonkey userscript that adds a screenshot button to **the "More" menu (three dots icon)** of Twitter/X posts, allowing you to easily capture and save tweets as images.
 
 https://github.com/learnerLj/twitter-screenshot
 ## 推特截图按钮
 
-一个Tampermonkey油猴脚本，为Twitter/X的推文菜单添加截图按钮，让您可以轻松地将推文保存为图片。
+一个Tampermonkey油猴脚本，为Twitter/X**推文的"更多"菜单（三个点图标）**添加截图按钮，让您可以轻松地将推文保存为图片。
 
 ## Features 功能
 
@@ -31,17 +31,17 @@ https://github.com/learnerLj/twitter-screenshot
 ## Installation 安装
 
 1. Install Tampermonkey browser extension
-2. Click [here](https://greasyfork.org/zh-CN/scripts/532781-twitter-screenshot-button) to install the script (Remember to update this URL after publishing on GreasyFork)
+2. Click [here](https://greasyfork.org/zh-CN/scripts/532781-twitter-screenshot-button) to install the script
 3. Refresh Twitter/X page
 
 1. 安装Tampermonkey浏览器扩展
-2. 点击[这里](https://greasyfork.org/zh-CN/scripts/532781-twitter-screenshot-button)安装脚本 (发布到 GreasyFork 后记得更新此 URL)
+2. 点击[这里](https://greasyfork.org/zh-CN/scripts/532781-twitter-screenshot-button)安装脚本
 3. 刷新Twitter/X页面
 
 ## Usage 使用方法
 
-1. Click the "..." menu on any tweet. The "Screenshot" button and "Capture Thread" button will appear at the top of the menu.
-   点击任意推文的"..."菜单，"Screenshot" 和 "Capture Thread" 按钮会出现在菜单顶部。
+1. Click the **"More" menu (three dots icon) on the top right of any tweet**. The "Screenshot" button and "Capture Thread" button will appear at the top of the menu.
+   点击任意推文**右上角的"更多"菜单（三个点图标）**，"Screenshot" 和 "Capture Thread" 按钮会出现在菜单顶部。
 
    ![Icon Position](./icoin-position.png)
 

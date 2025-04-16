@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Screenshot Button
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Add a screenshot button to Twitter/X post menus
 // @author       You
 // @match        https://twitter.com/*
@@ -637,12 +637,20 @@
             mutations.forEach((mutation) => {
                 if (mutation.addedNodes.length) {
                     mutation.addedNodes.forEach((node) => {
-                        if (node.nodeType === 1) {
+                        // Check if the added node itself is a menu or contains one
+                        if (node.nodeType === 1) { // Check if it's an element node
                             const menu = node.matches('[role="menu"]') ? node : node.querySelector('[role="menu"]');
                             if (menu) {
+                                // Find the button that triggered this menu
                                 const menuButton = document.querySelector('[aria-haspopup="menu"][aria-expanded="true"]');
-                                if (menuButton) {
+                                // IMPORTANT CHECK: Ensure the menu was triggered by the "More" button (three dots)
+                                // within an article, typically identified by data-testid="caret".
+                                if (menuButton && menuButton.closest('article[role="article"]') && menuButton.getAttribute('data-testid') === 'caret') {
+                                    console.log("Detected 'More' menu, adding buttons.");
                                     addScreenshotButtonToMenu(menuButton);
+                                } else {
+                                     // Optional: Log why buttons weren't added
+                                     // console.log("Detected menu, but not triggered by the target 'More' button or not within an article.");
                                 }
                             }
                         }
